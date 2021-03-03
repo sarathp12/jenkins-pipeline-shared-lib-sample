@@ -1,7 +1,7 @@
 package org.foo
 import static Ansi.*
 
-
+/*
 println color("BOLD", Ansi.BOLD)
 println color("ITALIC", Ansi.ITALIC)
 println color("UNDERLINE", Ansi.UNDERLINE)
@@ -40,6 +40,7 @@ println(
         color(pair.first(), pair.last())
     }.join(' ')
 )
+*/
 
 class Ansi {
 
@@ -71,7 +72,7 @@ class Ansi {
     static final String	LIGHT_CYAN      = "\u001B[1;36m"
 
     static String color(String text, String ansiValue) {
-        ansiValue + text + NORMAL
+        println(ansiValue + text + NORMAL)
     }
 
 }
