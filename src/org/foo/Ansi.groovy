@@ -73,7 +73,7 @@ class Ansi {
 
     //def colors = [black: 30, red: 31, green: 32, yellow: 33, blue: 34, magenta: 35, cyan: 36, white: 37]
 
-    static String color(String text, String color) {
+    static String color(String text, String ansiValue) {
         def colors = [black: 30, red: 31, green: 32, yellow: 33, blue: 34, magenta: 35, cyan: 36, white: 37]
         return(ansiValue + text + NORMAL)
         //return new String((char) 27) + "[${colors[color]}m${text}" + new String((char) 27) + "[0m"
