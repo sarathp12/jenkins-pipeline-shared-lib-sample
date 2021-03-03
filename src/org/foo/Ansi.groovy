@@ -1,6 +1,46 @@
 package org.foo
 import static Ansi.*
 
+
+println color("BOLD", Ansi.BOLD)
+println color("ITALIC", Ansi.ITALIC)
+println color("UNDERLINE", Ansi.UNDERLINE)
+println color("BLINK", Ansi.BLINK)
+println color("RAPID_BLINK", Ansi.RAPID_BLINK)
+println color("REVERSE_VIDEO", Ansi.REVERSE_VIDEO)
+println color("INVISIBLE_TEXT", Ansi.INVISIBLE_TEXT)
+
+println color("RED", Ansi.RED)
+println color("BLACK", Ansi.BLACK)
+println color("BOLD", Ansi.BOLD)
+println color("GREEN", Ansi.GREEN)
+println color("YELLOW", Ansi.YELLOW)
+println color("BLUE", Ansi.BLUE)
+println color("MAGENTA", Ansi.MAGENTA)
+println color("CYAN", Ansi.CYAN)
+println color("WHITE", Ansi.WHITE)
+println color("DARK_GRAY", Ansi.DARK_GRAY)
+println color("LIGHT_BLUE", Ansi.LIGHT_BLUE)
+println color("LIGHT_GREEN", Ansi.LIGHT_GREEN)
+println color("LIGHT_CYAN", Ansi.LIGHT_CYAN)
+println color("LIGHT_RED", Ansi.LIGHT_RED)
+println color("LIGHT_PURPLE", Ansi.LIGHT_PURPLE)
+println color("LIGHT_YELLOW", Ansi.LIGHT_YELLOW)
+
+println(
+    [
+        'Look', Ansi.LIGHT_RED,
+        'ma', Ansi.REVERSE_VIDEO,
+        ',', Ansi.GREEN,
+        'no ', Ansi.MAGENTA,
+        'hands!', Ansi.LIGHT_YELLOW
+    ]
+    .collate(2)
+    .collect { pair ->
+        color(pair.first(), pair.last())
+    }.join(' ')
+)
+
 class Ansi {
 
     static final String NORMAL          = "\u001B[0m"
