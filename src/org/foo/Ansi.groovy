@@ -75,7 +75,7 @@ class Ansi {
 
     static String color(String text, String color) {
         //return(ansiValue + text + NORMAL)
-        return new String((char) 27) + "[${colors[color]}m${text}" + new String((char) 27) + "[0m"
+        return new String((char) 27) + "[" + "${colors[color]}m${text}" + new String((char) 27) + "[0m"
 
     }
 
