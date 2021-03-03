@@ -72,7 +72,7 @@ class Ansi {
     static final String	LIGHT_CYAN      = "\u001B[1;36m"
 
     static String color(String text, String ansiValue) {
-        ansiValue + text + NORMAL)
+        ansiValue + text + NORMAL
     }
 
 }
